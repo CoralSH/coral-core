@@ -4,4 +4,4 @@ description="Coral core."
 keywords=("coral", "core")
 preferGlobal=false
 
-dependencies=("coral_util", "coral_require")
+dependencies=("coral-util", "coral-require")
