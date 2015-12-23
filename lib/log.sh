@@ -5,3 +5,7 @@ require "colors"
 log() {
   printf "$(colors cyan coral) %4s %12s : %s" "$1" "$(colors purple $2)" "$3"
 }
+
+info() {
+  log "$(colors green info)" $1 $2
+}
