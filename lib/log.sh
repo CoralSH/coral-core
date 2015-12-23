@@ -3,7 +3,7 @@ require "./util"
 require "colors"
 
 log() {
-  printf "$(colors cyan coral) %s %20s %s\n" "$1" "$(colors purple $2) :" "$3"
+  printf "$(colors cyan 'coral') %s %s : %s\n" "$1" "$(colors purple $2)" "$3"
 }
 
 info() {
