@@ -4,3 +4,5 @@ description="Coral's inner workings."
 main="lib/core.sh"
 keywords=("coral")
 license="MIT"
+
+dependencies=("colors")
