@@ -7,7 +7,7 @@ log() {
 }
 
 info() {
-  log "$(colors green info)" $1 $2
+  log "$(colors green 'info')" "$1" "$2"
 }
 
 error() {
