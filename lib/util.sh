@@ -1,3 +1,5 @@
+# Coral's utilities.
+
 get_modules_directory() {
   modules_directory=$(pwd)
 

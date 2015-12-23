@@ -1,3 +1,5 @@
+# Initialize a Coral Project
+
 . $(coral bootstrap)
 require "./util"
 
