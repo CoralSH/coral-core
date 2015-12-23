@@ -13,3 +13,7 @@ info() {
 error() {
   log "$(colors red 'ERR!')" "$1" "$2"
 }
+
+warn() {
+  log $(printf "\e[0;30;43mWARN\e[0m") "$1" "$2"
+}
