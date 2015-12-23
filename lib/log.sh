@@ -17,3 +17,7 @@ error() {
 warn() {
   log $(printf "\e[0;30;43mWARN\e[0m") "$1" "$2"
 }
+
+http() {
+  log "$(colors green 'http')" "$1" "$2"
+}
