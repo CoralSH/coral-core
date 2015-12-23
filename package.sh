@@ -1,7 +1,6 @@
 name="coral-core"
-version="0.0.1"
-description="Coral core."
-keywords=("coral", "core")
-preferGlobal=false
-
-dependencies=("coral-util", "coral-require")
+version="1.0.0"
+description=""
+main="index.sh"
+keywords=()
+license="MIT"
