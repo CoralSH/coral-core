@@ -7,10 +7,10 @@ display_help() {
 
   cat <<-EOF
 
-  $(printf "\e[2musage:\e[22m")
+  $(colors bright black "usage")
     $(colors bright cyan "coral") $(colors bright yellow "[options]") $(colors bright red "[COMMAND]") $(colors bright green "[args]")
 
-  $(printf "\e[2mcommands:\e[22m")
+  $(colors bright black "commands")
     $(colors bright cyan "coral")                              $(colors bright yellow "Display this help information")
     $(colors bright cyan "coral i")                            $(colors bright yellow "Initialize new Git repository")
     $(colors bright cyan "coral ig")                           $(colors bright yellow "List available .gitignore templates")
@@ -35,7 +35,7 @@ display_help() {
     $(colors bright cyan "coral ch <branch>")                  $(colors bright yellow "Checkout <branch>")
     $(colors bright cyan "coral in <hash>")                    $(colors bright yellow "Display info about <hash>")
 
-  $(printf "\e[2moptions:\e[22m")
+  $(colors bright black "options")
     $(colors bright cyan "-V, --version")                      $(colors bright yellow "Output current version of Git Goodies")
     $(colors bright cyan "-h, --help")                         $(colors bright yellow "Display this help information")
 
