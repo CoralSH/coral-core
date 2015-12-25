@@ -21,3 +21,7 @@ get_modules_directory() {
 get_current_directory_name() {
   echo "${PWD##*/}"
 }
+
+print_needs_internet_symbol() {
+  printf "\xF0\x9F\x93\xA1"
+}

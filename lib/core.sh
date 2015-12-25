@@ -4,40 +4,31 @@
 
 display_help() {
   require "colors"
+  require "./util"
 
   cat <<-EOF
 
-  $(colors bright black "usage")
-    $(colors bright cyan "coral") $(colors bright yellow "[options]") $(colors bright red "[COMMAND]") $(colors bright green "[args]")
+  $(colors bold white "usage:")
+    $(colors bright cyan "coral") $(colors bright cyan "[COMMAND]") $(colors bright yellow "[args]") $(colors bright black "[options]")
 
-  $(colors bright black "commands")
-    $(colors bright cyan "coral")                              $(colors bright yellow "Display this help information")
-    $(colors bright cyan "coral i")                            $(colors bright yellow "Initialize new Git repository")
-    $(colors bright cyan "coral ig")                           $(colors bright yellow "List available .gitignore templates")
-    $(colors bright cyan "coral ig <template>")                $(colors bright yellow "Add .gitignore file from <template>")
-    $(colors bright cyan "coral igf <file ...>")               $(colors bright yellow "Add all <file>(s) to .gitignore")
-    $(colors bright cyan "coral cl <url>")                     $(colors bright yellow "Clone repository from <url>")
-    $(colors bright cyan "coral a")                            $(colors bright yellow "Add all files")
-    $(colors bright cyan "coral a <file ...>")                 $(colors bright yellow "Add all <file>(s)")
-    $(colors bright cyan "coral c <message>")                  $(colors bright yellow "Add all files and commit with <message>")
-    $(colors bright cyan "coral cn <message>")                 $(colors bright yellow "Commit with <message>")
-    $(colors bright cyan "coral uc <count>")                   $(colors bright yellow "Go back (uncommit) <count> commits")
-    $(colors bright cyan "coral rc <message>")                 $(colors bright yellow "Add all files and recommit (amend) with <message>")
-    $(colors bright cyan "coral rcn <message>")                $(colors bright yellow "Recommit (amend) with <message>")
-    $(colors bright cyan "coral p")                            $(colors bright yellow "Push all commits to remote")
-    $(colors bright cyan "coral pl")                           $(colors bright yellow "Pull all commits from remote")
-    $(colors bright cyan "coral f")                            $(colors bright yellow "Fetch all commits from remote")
-    $(colors bright cyan "coral s")                            $(colors bright yellow "Display repository status")
-    $(colors bright cyan "coral l")                            $(colors bright yellow "Display repository commit log")
-    $(colors bright cyan "coral b")                            $(colors bright yellow "List all branches in repository")
-    $(colors bright cyan "coral b <branch>")                   $(colors bright yellow "Create and checkout <branch>")
-    $(colors bright cyan "coral ch")                           $(colors bright yellow "List all branches in repository")
-    $(colors bright cyan "coral ch <branch>")                  $(colors bright yellow "Checkout <branch>")
-    $(colors bright cyan "coral in <hash>")                    $(colors bright yellow "Display info about <hash>")
+  $(colors bold white "commands:")
+    $(colors bright cyan "coral")                              $(colors white "Display this help information")
+    $(colors bright cyan "coral") $(colors bright cyan "help") $(colors bright yellow "command")                 $(colors white "Display help information about <command>")
 
-  $(colors bright black "options")
-    $(colors bright cyan "-V, --version")                      $(colors bright yellow "Output current version of Git Goodies")
-    $(colors bright cyan "-h, --help")                         $(colors bright yellow "Display this help information")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install")                      $(colors white "Locally install all dependencies in package.sh")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "package")              $(colors white "Locally install <package> from the Coral registry")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "user/package")         $(colors white "Locally install <user/package> from GitHub")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "package") $(colors bright black "-g")           $(colors white "Globally install <package> from the Coral registry")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "user/package") $(colors bright black "-g")      $(colors white "Globally install <user/package> from GitHub")
+
+    $(colors bright cyan "coral") $(colors bright cyan "init")                         $(colors white "Interactively create a package.sh file")
+
+    $(colors bright cyan "coral") $(colors bright cyan "info")                         $(colors white "Get information about the package here")
+$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "info") $(colors bright yellow "package")                 $(colors white "Get information about <package>")
+
+  $(colors bold white "options:")
+    $(colors bright black "-V, --version")                      $(colors white "Output current version of Git Goodies")
+    $(colors bright black "-h, --help")                         $(colors white "Display this help information")
 
 EOF
 	exit 0
