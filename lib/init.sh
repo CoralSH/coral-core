@@ -1,6 +1,6 @@
 # Initialize a Coral Project
 
-. $(coral bootstrap)
+. $(coral_bootstrap)
 require "./util"
 
 prompt() {
