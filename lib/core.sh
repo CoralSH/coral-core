@@ -2,6 +2,12 @@
 
 . $(coral_bootstrap)
 
+command_install() {
+  require "./install"
+
+  install main $1
+}
+
 command_init() {
   require "./init"
 

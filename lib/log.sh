@@ -1,23 +1,22 @@
-. $(coral bootstrap)
-require "./util"
+. $(coral_bootstrap)
 require "colors"
 
-log() {
-  printf "$(colors cyan 'coral') %s %s %s\n" "$1" "$(colors purple $2)" "$3"
+general() {
+  printf "$(colors cyan 'coral') %s %s %s\n" "$1" "$(colors purple "$2")" "$3"
 }
 
 info() {
-  log "$(colors green 'info')" "$1" "$2"
+  general "$(colors underline green 'info')" "$1" "$2"
 }
 
 error() {
-  log "$(colors red 'ERR!')" "$1" "$2"
+  general "$(colors red 'ERR!')" "$1" "$2"
 }
 
 warn() {
-  log $(printf "\e[0;30;43mWARN\e[0m") "$1" "$2"
+  general $(printf "\e[0;30;43mWARN\e[0m") "$1" "$2"
 }
 
 http() {
-  log "$(colors green 'http')" "$1" "$2"
+  general "$(colors green 'http')" "$1" "$2"
 }
