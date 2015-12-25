@@ -2,7 +2,7 @@
 require "colors"
 
 general() {
-  printf "$(colors cyan 'coral') %s %s %s\n" "$1" "$(colors purple "$2")" "$3"
+  printf "$(colors dark cyan 'coral') %s %s %s\n" "$1" "$(colors dark red "$2")" "$3"
 }
 
 info() {
