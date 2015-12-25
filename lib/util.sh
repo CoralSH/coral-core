@@ -19,5 +19,5 @@ get_modules_directory() {
 }
 
 get_current_directory_name() {
-  printf '%s\n' "${PWD##*/}"
+  echo "${PWD##*/}"
 }
