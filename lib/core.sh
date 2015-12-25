@@ -3,6 +3,6 @@
 . $(coral_bootstrap)
 require "./init"
 
-init() {
+command_init() {
   init
 }
