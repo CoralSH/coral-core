@@ -1,19 +1,11 @@
 . $(coral_bootstrap)
 require "./log"
+require "colors"
 
 main() {
-  local starting_dir="$(pwd)"
-  modules_directory=$(pwd)
+  local starting_dir="$PWD"
 
-  while [ ! -f "$modules_directory/package.sh" ]; do
-    modules_directory=${modules_directory%/*}
-    if [ x"$modules_directory" = "x" ]; then
-      echo "couldn't find shell_modules"
-      exit
-    fi
-  done
-
-  cd "$modules_directory"
+  cd "$PWD"
 
   if [ ! -d "shell_modules" ]; then
     mkdir "shell_modules"
