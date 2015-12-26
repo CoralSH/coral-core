@@ -43,3 +43,11 @@ http() {
     general "$(colors green 'http')" "$1" "$2"
   fi
 }
+
+git() {
+  if [ "$#" -eq 1 ]; then
+    general "$(colors green 'GIT!')" "$1"
+  else
+    general "$(colors green 'GIT!')" "$1" "$2"
+  fi
+}
