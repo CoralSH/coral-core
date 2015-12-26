@@ -5,13 +5,13 @@ require "colors"
 main() {
   local starting_dir="$1"
 
+  log "info" "install" "$2"
+
   cd "$1"
 
   if [ ! -d "shell_modules" ]; then
     mkdir "shell_modules"
   fi
-
-  echo "installing $2"
 
   cd "shell_modules"
 
@@ -23,5 +23,5 @@ main() {
 
   cd "$starting_dir"
 
-  echo "installed $2!"
+  log "info" "installed" "$2"
 }
