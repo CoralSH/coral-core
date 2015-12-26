@@ -6,7 +6,7 @@ general() {
   if [ "$#" -eq 2 ]; then
     printf "$(colors bright cyan 'coral') %s %s\n" "$1" "$(colors none "$2")"
   else
-    printf "$(colors bright cyan 'coral') %s %s %s\n" "$1" "$(colors bright red "$2")" "$3"
+    printf "$(colors bright cyan 'coral') %s %s %s\n" "$1" "$(colors purple "$2")" "$3"
   fi
 }
 
