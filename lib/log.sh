@@ -1,5 +1,6 @@
 . $(coral_bootstrap)
 require "colors"
+require "stacktrace"
 
 general() {
   if [ "$#" -eq 2 ]; then
@@ -19,10 +20,12 @@ info() {
 
 error() {
   if [ "$#" -eq 1 ]; then
-    general "$(colors red 'ERR!')" "$1"
+    message=$(general "$(colors red 'ERR!')" "$1")
   else
-    general "$(colors red 'ERR!')" "$1" "$2"
+    message=$(general "$(colors red 'ERR!')" "$1" "$2")
   fi
+
+  stacktrace main "$message"
 }
 
 warn() {
