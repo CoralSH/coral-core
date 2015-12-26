@@ -37,7 +37,7 @@ EOF
 command_install() {
   require "./install"
 
-  install main $1
+  install main $1 $2
 }
 
 command_init() {

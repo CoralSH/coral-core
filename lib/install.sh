@@ -3,25 +3,25 @@ require "./log"
 require "colors"
 
 main() {
-  local starting_dir="$PWD"
+  local starting_dir="$1"
 
-  cd "$PWD"
+  cd "$1"
 
   if [ ! -d "shell_modules" ]; then
     mkdir "shell_modules"
   fi
 
-  echo "installing $1"
+  echo "installing $2"
 
   cd "shell_modules"
 
-  if [ -d "$1" ]; then
-    rm -rf "$1"
+  if [ -d "$2" ]; then
+    rm -rf "$2"
   fi
 
-  git clone "https://github.com/CoralSH/$1.git" --quiet
+  git clone "https://github.com/CoralSH/$2.git" --quiet
 
   cd "$starting_dir"
 
-  echo "installed $1!"
+  echo "installed $2!"
 }
