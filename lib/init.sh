@@ -31,7 +31,7 @@ main() {
   keywords=($keywords)
   keywords_string="("
   for keyword in "${keywords[@]}"; do
-    keywords_string="$keywords_string$keyword, "
+    keywords_string="$keywords_string\"$keyword\", "
   done
   keywords_string=${keywords_string%??}
   keywords_string="$keywords_string)"

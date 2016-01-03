@@ -19,9 +19,12 @@ main() {
     rm -rf "$2"
   fi
 
-  git clone "https://github.com/CoralSH/$2.git" --quiet
+  clone_url="https://github.com/CoralSH/$2.git"
+  git clone "$clone_url" --quiet
 
   cd "$starting_dir"
 
   log "info" "installed" "$2"
 }
+
+main
