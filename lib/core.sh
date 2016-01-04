@@ -47,3 +47,9 @@ command_init() {
 
   init
 }
+
+command_whooo() {
+  require "./whooo"
+
+  whooo
+}
