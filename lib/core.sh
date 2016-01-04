@@ -3,6 +3,13 @@
 . $(coral_bootstrap)
 
 display_help() {
+  if [ $# -ge 1 ]; then
+    require "./$1"
+    $1 help
+
+    return
+  fi
+
   require "colors"
   require "./util"
 
