@@ -10,18 +10,18 @@ display_help() {
 
   » $(colors bold cyan "coral") $(colors green "command") $(colors red "arguments") $(colors yellow "--option")
 
-  ┌ $(colors green "help")               Display help information
-  ├ $(colors green "init")               Interactively create a package.sh file
-  ├ $(colors green "info")               Information about a package
-  ├ $(colors green "install")            Install a package
-  ├ $(colors green "uninstall")          Uninstall a package
-  ├ $(colors green "publish")            Publish a package to the registry
-  ├ $(colors green "unpublish")          Remove a package from the registry
-  ├ $(colors green "version")            Work with package versions
-  └ $(colors green "whoami")             Information about yourself
+  ┌ $(colors green "help")                      Display help information
+  ├ $(colors green "init")                      Interactively create a package.sh file
+  ├ $(colors green "info")                      Information about a package
+  ├ $(colors green "install")                   Install a package
+  ├ $(colors green "uninstall")                 Uninstall a package
+  ├ $(colors green "publish")                   Publish a package to the registry
+  ├ $(colors green "unpublish")                 Remove a package from the registry
+  ├ $(colors green "version")                   Work with package versions
+  └ $(colors green "whoami")                    Information about yourself
 
-  ┌ $(colors yellow "-h, --help")         Display this help information
-  └ $(colors yellow "-V, --version")      Output current version
+  ┌ $(colors yellow "-h, --help")                Display this help information
+  └ $(colors yellow "-V, --version")             Output current version
 
   $(colors bright black "# version $VERSION")
 
