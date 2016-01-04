@@ -3,6 +3,19 @@
 . $(coral_bootstrap)
 require "./util"
 
+help() {
+  require "colors"
+
+  cat <<-EOF
+
+  » $(colors bold cyan "coral") $(colors green "init")
+  $(colors bright black "# interactively create a package.sh file")
+
+  ╴$(colors green "init") $(colors yellow "[-d|--defaults]")      Display help information
+
+EOF
+}
+
 prompt() {
   local key=${3:-${1// /_}}
   [ ! -z $2 ] && local default="($2) "
