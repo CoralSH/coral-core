@@ -8,27 +8,22 @@ display_help() {
 
   cat <<-EOF
 
-  $(colors bold white "usage:")
-    $(colors bright cyan "coral") $(colors bright cyan "[COMMAND]") $(colors bright yellow "[args]") $(colors bright black "[options]")
+  » $(colors bold cyan "coral") $(colors green "command") $(colors red "arguments") $(colors yellow "--option")
 
-  $(colors bold white "commands:")
-    $(colors bright cyan "coral")                              $(colors white "Display this help information")
-    $(colors bright cyan "coral") $(colors bright cyan "help") $(colors bright yellow "command")                 $(colors white "Display help information about <command>")
+  ┌ $(colors green "help")               Display help information
+  ├ $(colors green "init")               Interactively create a package.sh file
+  ├ $(colors green "info")               Information about a package
+  ├ $(colors green "install")            Install a package
+  ├ $(colors green "uninstall")          Uninstall a package
+  ├ $(colors green "publish")            Publish a package to the registry
+  ├ $(colors green "unpublish")          Remove a package from the registry
+  ├ $(colors green "version")            Work with package versions
+  └ $(colors green "whoami")             Information about yourself
 
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install")                      $(colors white "Locally install all dependencies in package.sh")
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "package")              $(colors white "Locally install <package> from the Coral registry")
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "user/package")         $(colors white "Locally install <user/package> from GitHub")
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "package") $(colors bright black "-g")           $(colors white "Globally install <package> from the Coral registry")
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "install") $(colors bright yellow "user/package") $(colors bright black "-g")      $(colors white "Globally install <user/package> from GitHub")
+  ┌ $(colors yellow "-h, --help")         Display this help information
+  └ $(colors yellow "-V, --version")      Output current version
 
-    $(colors bright cyan "coral") $(colors bright cyan "init")                         $(colors white "Interactively create a package.sh file")
-
-    $(colors bright cyan "coral") $(colors bright cyan "info")                         $(colors white "Get information about the package here")
-$(util print_needs_internet_symbol)   $(colors bright cyan "coral") $(colors bright cyan "info") $(colors bright yellow "package")                 $(colors white "Get information about <package>")
-
-  $(colors bold white "options:")
-    $(colors bright black "-V, --version")                      $(colors white "Output current version of Git Goodies")
-    $(colors bright black "-h, --help")                         $(colors white "Display this help information")
+  $(colors bright black "# version $VERSION")
 
 EOF
 	exit 0
